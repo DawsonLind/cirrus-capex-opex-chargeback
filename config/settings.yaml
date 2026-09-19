@@ -1,0 +1,16 @@
+customer: Cirrus
+engagement: Tungsten
+finance_email: dawson.lind@x.ai
+report_cadence: weekly
+default_lookback_days: 7
+
+# API
+api_base_url: https://api.cursor.com
+page_size: 1000
+
+# Auth: CURSOR_API_KEY env var preferred; else card.CURSOR_API_KEY in
+# /home/box/agent-data/box-secrets.json
+secrets_path: /home/box/agent-data/box-secrets.json
+
+# Output
+out_dir: out

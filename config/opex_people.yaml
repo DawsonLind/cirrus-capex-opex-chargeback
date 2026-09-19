@@ -1,0 +1,15 @@
+# Support / OpEx override list (MOCK data for the prototype).
+# People on this list get 100% of their Cursor spend classified as OpEx,
+# regardless of CapEx repo AI commit activity.
+#
+# Replace these with real Cirrus Support / Ops emails before production use.
+# All entries below are clearly fake or labeled MOCK.
+
+opex_emails:
+  - support.agent@cirrus.example          # MOCK: fake Support L1
+  - support.l2@cirrus.example             # MOCK: fake Support L2
+  - finance.ops@cirrus.example            # MOCK: fake Finance Ops
+  - hanna+opex-mock@cursor.sh             # MOCK: placeholder cursor.sh-style
+  - josh.lewis+opex-mock@cursor.sh        # MOCK: placeholder cursor.sh-style
+
+# Matching is case-insensitive exact email match.

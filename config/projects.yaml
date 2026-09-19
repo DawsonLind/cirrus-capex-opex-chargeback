@@ -1,0 +1,26 @@
+# CapEx project definitions for Cirrus / Tungsten chargeback.
+# Matching: case-insensitive substring against repoName (full string or
+# the segment after the last slash, e.g. "owner/tungsten-frontend").
+# First matching project wins if patterns overlap (order matters).
+
+projects:
+  - name: Tungsten
+    patterns:
+      - tungsten-frontend
+      - tungsten-backend
+  - name: LMS
+    patterns:
+      - lms-frontend
+      - lms-backend
+  - name: Payments
+    patterns:
+      - payments-service
+  - name: Data Platform
+    patterns:
+      - data-platform
+
+# How repoName is matched to a project:
+# 1. Normalize repoName to lowercase.
+# 2. Also consider the basename after the last "/".
+# 3. A project matches if any of its patterns is a substring of either.
+# Empty / missing repoName never matches a CapEx project.
