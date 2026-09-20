@@ -11,7 +11,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 from src.allocation import allocate_spend, summarize
-from src.auth import load_api_key
+from src.auth import load_api_key, load_dotenv
 from src.config_loader import (
     load_opex_emails,
     load_projects,
@@ -100,6 +100,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
+    load_dotenv()
     args = build_parser().parse_args(argv)
     root = project_root()
     config_dir = Path(args.config_dir) if args.config_dir else root / "config"

@@ -45,8 +45,9 @@ pip install -r requirements.txt
 ### API key (never commit or print)
 
 1. In Cursor Dashboard → team settings, mint an **Admin API key**.
-2. Prefer env: `export CURSOR_API_KEY='…'`
-3. Or place under `/home/box/agent-data/box-secrets.json` → `card.CURSOR_API_KEY`.
+2. Prefer `.env` (gitignored): set `CURSOR_API_KEY=…` — loaded on CLI start.
+3. Or export: `export CURSOR_API_KEY='…'`
+4. Or place under `/home/box/agent-data/box-secrets.json` → `card.CURSOR_API_KEY`.
 
 If both are set, **env wins**. A stale/invalid `CURSOR_API_KEY` in the environment
 will 401 even when `box-secrets.json` is valid — unset it (`env -u CURSOR_API_KEY`)
